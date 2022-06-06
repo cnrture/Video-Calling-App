@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">Video Calling App</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string name="meeting_id">Meeting ID</string>
+    <string name="join">Join</string>
+    <string name="create">Create</string>
+
+    <string name="no_room_message">No room found with this ID</string>
+    <string name="sign_in_huawei">Sign in with Huawei ID</string>
+
+    <string name="error_meeting_id_check">Error Meeting Id Check</string>
+</resources>

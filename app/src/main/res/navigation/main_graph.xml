@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_graph"
+    app:startDestination="@id/splashFragment">
+
+    <fragment
+        android:id="@+id/mainFragment"
+        android:name="com.canerture.videocallingapp.presentation.main.MainFragment"
+        android:label="fragment_main"
+        tools:layout="@layout/fragment_main" />
+    <fragment
+        android:id="@+id/splashFragment"
+        android:name="com.canerture.videocallingapp.presentation.login.LoginFragment"
+        android:label="fragment_splash"
+        tools:layout="@layout/fragment_login" >
+        <action
+            android:id="@+id/loginToMain"
+            app:destination="@id/mainFragment"
+            app:popUpTo="@id/splashFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+</navigation>

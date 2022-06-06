@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <org.webrtc.SurfaceViewRenderer
+        android:id="@+id/remote_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/tv_calling_time_second"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_4sdp"
+        android:textColor="@color/white"
+        android:textSize="@dimen/_12ssp"
+        app:layout_constraintStart_toEndOf="@+id/tv_calling_time_minute"
+        app:layout_constraintTop_toBottomOf="@+id/tv_calling_user"
+        tools:text="39" />
+
+    <org.webrtc.SurfaceViewRenderer
+        android:id="@+id/local_view"
+        android:layout_width="@dimen/_100sdp"
+        android:layout_height="@dimen/_140sdp"
+        android:layout_marginTop="@dimen/_16sdp"
+        android:layout_marginEnd="@dimen/_16sdp"
+        android:elevation="@dimen/_12sdp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/mic_btn"
+        android:layout_width="@dimen/_36sdp"
+        android:layout_height="@dimen/_36sdp"
+        android:background="@drawable/circle_background"
+        android:clickable="true"
+        android:focusable="true"
+        android:padding="@dimen/_10sdp"
+        app:layout_constraintBottom_toBottomOf="@+id/end_call_btn"
+        app:layout_constraintEnd_toStartOf="@+id/end_call_btn"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/end_call_btn"
+        app:srcCompat="@drawable/ic_mic_on" />
+
+    <ImageView
+        android:id="@+id/end_call_btn"
+        android:layout_width="@dimen/_48sdp"
+        android:layout_height="@dimen/_48sdp"
+        android:layout_marginStart="@dimen/_32sdp"
+        android:layout_marginEnd="@dimen/_32sdp"
+        android:layout_marginBottom="@dimen/_32sdp"
+        android:background="@drawable/circle_background"
+        android:clickable="false"
+        android:padding="@dimen/_12sdp"
+        app:backgroundTint="@android:color/holo_red_dark"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/video_btn"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/mic_btn"
+        app:srcCompat="@drawable/ic_call" />
+
+    <ImageView
+        android:id="@+id/video_btn"
+        android:layout_width="@dimen/_36sdp"
+        android:layout_height="@dimen/_36sdp"
+        android:background="@drawable/circle_background"
+        android:clickable="true"
+        android:focusable="true"
+        android:padding="@dimen/_10sdp"
+        app:layout_constraintBottom_toBottomOf="@+id/end_call_btn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/end_call_btn"
+        app:layout_constraintTop_toTopOf="@+id/end_call_btn"
+        app:srcCompat="@drawable/ic_cam_on" />
+
+    <ImageView
+        android:id="@+id/switch_camera_btn"
+        android:layout_width="@dimen/_32sdp"
+        android:layout_height="@dimen/_32sdp"
+        android:background="@drawable/circle_background"
+        android:elevation="@dimen/_12sdp"
+        android:focusable="true"
+        android:padding="@dimen/_8sdp"
+        app:layout_constraintBottom_toBottomOf="@+id/local_view"
+        app:layout_constraintEnd_toEndOf="@+id/local_view"
+        app:layout_constraintStart_toStartOf="@+id/local_view"
+        app:layout_constraintTop_toBottomOf="@+id/local_view"
+        app:srcCompat="@drawable/ic_switch" />
+
+    <TextView
+        android:id="@+id/tv_calling_user"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_16sdp"
+        android:layout_marginTop="@dimen/_16sdp"
+        android:textColor="@color/white"
+        android:textSize="@dimen/_16ssp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="Caner Türe" />
+
+    <TextView
+        android:id="@+id/tv_calling_time_minute"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_4sdp"
+        android:textColor="@color/white"
+        android:textSize="@dimen/_12ssp"
+        app:layout_constraintStart_toStartOf="@+id/tv_calling_user"
+        app:layout_constraintTop_toBottomOf="@+id/tv_calling_user"
+        tools:text="00:" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="@+id/til_meeting_id"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_chainStyle="packed"
+        app:srcCompat="@drawable/ic_vector_home"
+        tools:ignore="ContentDescription" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/til_meeting_id"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_64sdp"
+        android:layout_marginTop="@dimen/_64sdp"
+        android:layout_marginEnd="@dimen/_64sdp"
+        android:layout_marginBottom="@dimen/_8sdp"
+        android:textColorHint="@color/purple"
+        app:boxBackgroundMode="outline"
+        app:boxStrokeColor="@color/purple"
+        app:hintTextColor="@color/purple"
+        app:layout_constraintBottom_toTopOf="@+id/btn_create"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView3">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/et_meeting_id"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:hint="@string/meeting_id"
+            android:singleLine="true" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_create"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/_50sdp"
+        android:layout_marginTop="@dimen/_16sdp"
+        android:layout_marginBottom="@dimen/_8sdp"
+        android:backgroundTint="@color/purple"
+        android:text="@string/create"
+        android:textAllCaps="false"
+        android:textSize="@dimen/_12ssp"
+        app:layout_constraintBottom_toTopOf="@+id/btn_join"
+        app:layout_constraintEnd_toEndOf="@+id/til_meeting_id"
+        app:layout_constraintStart_toStartOf="@+id/til_meeting_id"
+        app:layout_constraintTop_toBottomOf="@+id/til_meeting_id" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_join"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/_50sdp"
+        android:backgroundTint="@color/purple"
+        android:text="@string/join"
+        android:textAllCaps="false"
+        android:textSize="@dimen/_12ssp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/til_meeting_id"
+        app:layout_constraintStart_toStartOf="@+id/til_meeting_id"
+        app:layout_constraintTop_toBottomOf="@+id/btn_create" />
+
+    <ImageView
+        android:id="@+id/img_generate_id"
+        android:layout_width="@dimen/_20sdp"
+        android:layout_height="@dimen/_20sdp"
+        android:layout_marginStart="@dimen/_8sdp"
+        app:layout_constraintBottom_toBottomOf="@+id/til_meeting_id"
+        app:layout_constraintStart_toEndOf="@+id/til_meeting_id"
+        app:layout_constraintTop_toTopOf="@+id/til_meeting_id"
+        app:srcCompat="@drawable/ic_switch" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

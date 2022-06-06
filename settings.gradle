@@ -1,0 +1,21 @@
+import org.gradle.api.initialization.resolve.RepositoriesMode
+
+pluginManagement {
+    repositories {
+        gradlePluginPortal()
+        google()
+        mavenCentral()
+        maven { url 'https://developer.huawei.com/repo/' }
+    }
+}
+dependencyResolutionManagement {
+    repositoriesMode.set(RepositoriesMode.PREFER_PROJECT)
+    repositories {
+        google()
+        mavenCentral()
+        maven { url 'https://developer.huawei.com/repo/' }
+        jcenter()
+    }
+}
+rootProject.name = "Video Calling App"
+include ':app'
