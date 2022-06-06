@@ -1,6 +1,9 @@
 # Video Calling App
 
 ### A video calling application built using Huawei Cloud DB and WebRTC.
+<a href="https://medium.com/huawei-developers-tr/webrtc-nedir-ve-kotlinde-huawei-clouddb-ile-nas%C4%B1l-kullan%C4%B1l%C4%B1r-755feb42f3b1">Medium Article Link</a>
+
+![Header Image](https://user-images.githubusercontent.com/29903779/172182102-69970b84-9888-41dd-98d8-9bff6fdc1c34.png)
 
 ## Project Features
  - MVVM (Model, View, ViewModel)
