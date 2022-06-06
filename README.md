@@ -5,7 +5,6 @@
 ## Project Features
  - MVVM (Model, View, ViewModel)
  - LiveData
- - DataBinding
  - Navigation Component (NavGraph)
  - Hilt for Dependency Injection
  - WebRTC to perform Video and Voice call (<a href="https://webrtc.org/">Source</a>)
