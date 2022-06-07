@@ -53,7 +53,6 @@ class MainFragment : Fragment() {
                     }
                 }
             }
-
             btnCreate.setOnClickListener { intentToCall(false) }
         }
     }

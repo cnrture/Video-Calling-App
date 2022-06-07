@@ -16,12 +16,10 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-
         checkPermissions(this)
     }
 
     private fun checkPermissions(activity: Activity) {
-
         if (ContextCompat.checkSelfPermission(
                 activity,
                 Manifest.permission.CAMERA
