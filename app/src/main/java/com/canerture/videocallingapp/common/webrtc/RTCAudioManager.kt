@@ -1,5 +1,6 @@
 package com.canerture.videocallingapp.common.webrtc
 
+import android.annotation.SuppressLint
 import android.content.BroadcastReceiver
 import android.content.Context
 import android.content.Intent
@@ -233,6 +234,7 @@ class RTCAudioManager(context: Context) {
         return apprtcContext.getPackageManager().hasSystemFeature(PackageManager.FEATURE_TELEPHONY)
     }
 
+    @SuppressLint("ObsoleteSdkInt")
     @Deprecated("")
     private fun hasWiredHeadset(): Boolean {
         if (Build.VERSION.SDK_INT < Build.VERSION_CODES.M) {

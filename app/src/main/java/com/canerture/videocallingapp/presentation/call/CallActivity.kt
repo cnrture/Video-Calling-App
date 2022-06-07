@@ -98,7 +98,7 @@ class CallActivity : AppCompatActivity() {
             }
 
             answerReceived.observe(lifeCyclerOwner) {
-                handler?.postDelayed(runnable, 0)
+                handler.postDelayed(runnable, 0)
                 startTime = SystemClock.uptimeMillis()
             }
 
@@ -112,7 +112,6 @@ class CallActivity : AppCompatActivity() {
     private var runnable = object : Runnable {
 
         override fun run() {
-
             millisecondTime = SystemClock.uptimeMillis() - startTime
             seconds = (millisecondTime / 1000).toInt()
             minutes = seconds / 60
@@ -121,7 +120,7 @@ class CallActivity : AppCompatActivity() {
             setTimeText(minutes, binding.tvCallingTimeMinute)
             setTimeText(seconds, binding.tvCallingTimeSecond)
 
-            handler?.postDelayed(this, 0)
+            handler.postDelayed(this, 0)
         }
     }
 
